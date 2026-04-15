@@ -38,3 +38,7 @@ The algorithm has been validated on standard hardware (3.5 GHz base clock CPU, c
 
 The immense internal state and the collapse to 256 bits statistically shield it against accidental collisions in massive data structures (Birthday Paradox with a margin of 2^128).
 
+##  License & Acknowledgements
+This project is open for auditing, peer review, and integration into production environments.
+
+Special thanks to the SMHasher3 community for providing the demanding testing framework that forced the mathematical evolution of this algorithm, as well as the foundational research by Austin Appleby (MurmurHash) and Ralph Merkle.

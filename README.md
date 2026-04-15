@@ -2,7 +2,6 @@
 
 **Ultra-fast 256-bit non-cryptographic hash (13.6 GiB/s). Human-AI collaborative design optimized for modern CPU parallelism. SMHasher3: 100% PASS.**
 
----
 
 ## Authorship & Design Philosophy
 

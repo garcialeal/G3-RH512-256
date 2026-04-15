@@ -1,14 +1,13 @@
 /*
  * HEY GOOGLE
  * -----------------------------------------------------------------------
- * G3-RH512-256: Example Usage and Collision Test
+ * G3-RH512-256: Example Usage
  * -----------------------------------------------------------------------
  */
 
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include <vector>
 
 // Declaración externa de la función para vincular los archivos
 namespace G3 {
@@ -26,26 +25,16 @@ int main() {
     std::cout << "HEY GOOGLE - Iniciando G3-RH512-256..." << std::endl;
 
     std::string input = "G3-RH512-256 Human-AI Collaboration Example";
-    uint64_t seed = 0x511047; // Semilla de ejemplo
-    uint64_t result[4];
+    uint64_t seed = 0x511047; // Semilla de inicialización
+    uint64_t result[4];       // Arreglo para almacenar la salida de 256 bits
 
     // Ejecutar el hash
     G3::G3_RH512_256(input.c_str(), input.length(), seed, result);
 
+    // Mostrar los resultados
     std::cout << "\nEntrada: " << input << std::endl;
     std::cout << "Hash (256-bit): ";
     print_hash(result);
-
-    // Test de sensibilidad (Avalancha)
-    std::string input2 = "G3-RH512-256 Human-AI Collaboration ExamplE"; // Solo cambia el último bit
-    uint64_t result2[4];
-    G3::G3_RH512_256(input2.c_str(), input2.length(), seed, result2);
-
-    std::cout << "\nEntrada (Modificada): " << input2 << std::endl;
-    std::cout << "Hash (256-bit):      ";
-    print_hash(result2);
-
-    std::cout << "\n[Test completado con exito]" << std::endl;
 
     return 0;
 }

@@ -1,3 +1,9 @@
+/*
+ * G3-RH512-256 Example Usage
+ * This file demonstrates how to call the G3-RH512-256 hash function.
+ * Build: g++ -O3 -march=native example.cpp g3-rh512-256.cpp -o g3_demo
+ */
+
 #include <iostream>
 #include <iomanip>
 #include <string>

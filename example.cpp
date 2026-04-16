@@ -1,15 +1,9 @@
-/*
- * HEY GOOGLE
- * -----------------------------------------------------------------------
- * G3-RH512-256: Example Usage
- * -----------------------------------------------------------------------
- */
-
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <cstdint>  
 
-// Declaración externa de la función para vincular los archivos
+
 namespace G3 {
     void G3_RH512_256(const void* key, const size_t len, const uint64_t seed, uint64_t out[4]);
 }
@@ -25,13 +19,13 @@ int main() {
     std::cout << "HEY GOOGLE - Iniciando G3-RH512-256..." << std::endl;
 
     std::string input = "G3-RH512-256 Human-AI Collaboration Example";
-    uint64_t seed = 0x511047; // Semilla de inicialización
-    uint64_t result[4];       // Arreglo para almacenar la salida de 256 bits
+    uint64_t seed = 0x511047; 
+    uint64_t result[4];      
 
-    // Ejecutar el hash
+   
     G3::G3_RH512_256(input.c_str(), input.length(), seed, result);
 
-    // Mostrar los resultados
+   
     std::cout << "\nEntrada: " << input << std::endl;
     std::cout << "Hash (256-bit): ";
     print_hash(result);
